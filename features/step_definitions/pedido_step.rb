@@ -20,7 +20,7 @@ Dado("que estou na tela de login") do
   end
   
   Quando("tento fazer uma busca de um produto") do
-    @browser.text_field(class:'form-field').set 'barrinha'
+    @browser.text_field(class:'form-field').set 'corda'
     @browser.button(title:'Buscar').click
   end
   
