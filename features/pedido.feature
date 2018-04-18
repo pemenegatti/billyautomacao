@@ -1,6 +1,6 @@
 # language: pt
-@pedido
-Funcionalidade: Pedido
+@geral
+Funcionalidade: Geral
 
 @login
 Cenário: Login Usuário Válido
@@ -9,41 +9,24 @@ Dado que estou na tela de login
 Quando tento fazer um login com um usuário Válido
 Então devo me logar
 
-@pesquisa
-Cenário: Pesquisar um produto 
+@pedido @mono @boleto
+Cenário: Fechar pedido boleto
 
-Dado que estou na home do site
-Quando tento fazer uma busca de um produto
-Então devo selecionar produto pesquisado
+Dado que estou logado
+Quando pesquiso por um produto
+    E vou para a pdp do produto
+    E adiciono o produto ao carrinho
+    E vou para tela de entrega
+    E seleciono o tipo de entrega
+    E seleciono o tipo de pagamento boleto
+Então fecho o pedido
 
-@addcarrinho
-Cenário: Adicionar um produto ao carrinho 
+@pesquisasli
+Cenário: Realizar uma pesquisa
 
-Dado que estou na pdp de um produto
-Quando tento selecionar tamanho e cor
-Então devo addcarrinho ao carrinho
-
-@carrinho
-Cenário: Concluir produto no carrinho 
-
-Dado que estou no carrinho
-Então devo clicar em cuncluir pedido
-
-@telaentrega
-Cenário: Selecionar Tipo de entrega 
-
-Dado que estou na tela de entrega
-Quando tento selecionar tipo de entrega
-Então devo selecionar entrega normal
-
-@fecharpedido
-Cenário: Fechar o pedido 
-
-Dado que estou na tela de pagamento
-Então devo selecionar pagamento boleto
-
-@buscasli
-Cenário: Buscar produto SLI 
-
-Dado que estou realizando uma busca na SLI
-Então devo pesquisar por um item
+Dado que estou na home 
+Quando realizao uma pesquisa
+    E listo os nomes dos quatros primeiros produtos
+    E tiro um print screen dos quatros primeiros produtos
+    E realizo um scroll ate o rodapé da pagina
+Então tira um print screen do rodapé da pagina   

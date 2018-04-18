@@ -11,7 +11,7 @@ else
   Dir.mkdir("./screenshots/#{Data_time}")
 end
 # o default do watir é o chrome, caso você queira iniciar com um outro tipo de browser é so passar após o .new :firefox
-browser = Watir::Browser.new
+browser = Watir::Browser.new :chrome, headless: false
 browser.driver.manage.window.maximize
 
 Before do 
