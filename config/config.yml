@@ -1,0 +1,18 @@
+################################################################################
+# Copyright 2018 Centauro centauro.com.br. All rights reserved.
+# Author: "Leandro Bezerra" <leandro.bezerra>
+#
+# Config file for the test automation
+# When a config_local.yml exists, that will then be loaded instead of this default config file
+
+################################################################################
+# Set the global variables
+close_browser_after: end             # Can be `scenario`, `feature` or `end`
+
+################################################################################
+# List of error strings. `browser.html_error` will return an array of detected strings.
+error_strings:
+  [
+    "Server Error",
+    "Error: Page Not Found"
+  ]
